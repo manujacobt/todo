@@ -1,0 +1,29 @@
+.login{
+    background-color: black;
+    height: 100vh;
+}
+#heading{
+    position: relative;
+    padding: 10px;
+    top: 3%;
+    color:red;
+    text-align: center;
+}
+.myform{
+    position: relative;
+    left: 30%;
+    top:10%;
+    text-align: left;
+    background-color: aliceblue;
+    border-radius: 7px;
+    padding: 4%;
+   
+   
+}
+#but{
+    text-align: center;
+    box-align: center;
+    color: red;
+}
+
+
