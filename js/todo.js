@@ -36,16 +36,29 @@ function ajax(){
 
     var total_checked=0;
     vark=0;
-    
+
+        
      function vald(){
+      return new Promise(function(resolve,reject){
       total_checked =  $("input[type='checkbox']:checked").length;
       k=total_checked-j;
-      console.log(k)
       if(k==5){
-        alert("5");
-      }
+                resolve(alert("congradulation :five of the check boxes selected"));
+                console.log(k)
+            }
+            else{
+                         reject("five of check box not selected");
+                      }
+
+                    });
+                     promise
+                     .then(function(s){
+                        console.log(s);
+                     })
+                    }
+       
       
-      };
+      
       
 
       
