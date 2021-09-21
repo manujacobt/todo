@@ -1,20 +1,25 @@
+
+var j=0;
 function ajax(){
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
       if(this.readyState==4&&this.status==200){
         var response = JSON.parse(this.responseText);
-        var output =[];
+        var output ="";
        
         
         for(var i=0;i<response.length;i++){
           if(response[i].completed==false){
-          output[i] = "<input type=checkbox id=cb >   "+ response[i].title +"</br></br>";
+            output += "<input type=checkbox id=cb>   "+ response[i].title +"</br></br>";
+          
           }
           
          
           if(response[i].completed==true){
-            output[i] = "<input type=checkbox id=cb checked disabled>   "+ response[i].title +"</br></br>";
+            output += "<input type=checkbox checked disabled id=cb>   "+ response[i].title +"</br></br>";
+            j++;
+            console.log(j);
             
           }
                  
@@ -29,49 +34,22 @@ function ajax(){
     xhttp.send();
     }
 
-
-
-     var c=0;
+    var total_checked=0;
+    vark=0;
     
-   
-     function vald(){          
-       
-       var cb=document.getElementById("cb");   
-
-    //  if(cb.checked==true){
-    //   c++;    
-    //   console.log(c);     
+     function vald(){
+      total_checked =  $("input[type='checkbox']:checked").length;
+      k=total_checked-j;
+      console.log(k)
+      if(k==5){
+        alert("5");
+      }
       
-    //          } 
-    //          else if(cb.unchecked==true){
-    //           if(cb.checked==true){
-    //             c++;    
-    //             console.log(c);     
-                
-    //                    } 
-               
-    //           console.log(c);
-    //  c--;
-             
-    //          }
-    //          else{
-    //            console.log(c);
-    //          }
-    
-    
-          
-    //         if (c==5){
-    //           alert("5");
-    //           return true;               
-    //         }
-        
-    //       }     
-            
-    
-  
+      };
       
-  
-                  
+
+      
+      
         
         
    
