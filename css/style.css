@@ -1,5 +1,5 @@
 .login{
-    background-color: black;
+    background: aliceblue;
     height: 100vh;
 }
 #heading{
@@ -9,14 +9,14 @@
     color:red;
     text-align: center;
 }
-.myform{
+.myform{   
     position: relative;
-    left: 30%;
     top:10%;
-    text-align: left;
-    background-color: aliceblue;
-    border-radius: 7px;
-    padding: 4%;
+    max-width: 620px;
+  margin: auto;
+  padding:4%;
+  background: #2196f3;
+  border-radius: 7px;
    
    
 }
