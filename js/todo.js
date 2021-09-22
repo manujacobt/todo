@@ -42,8 +42,8 @@ function ajax(){
       return new Promise(function(resolve,reject){
       total_checked =  $("input[type='checkbox']:checked").length;
       k=total_checked-j;
-      if(k==5){
-                resolve(alert("congradulation : Five of the check boxes selected"));
+      if(k==5){        
+                resolve(alert("congradulation : Five of the check boxes selected"));                
                 console.log(k)
             }
             else{
@@ -57,7 +57,7 @@ function ajax(){
                      })
                     }
        
-                  
+                   
                 
                   
       
