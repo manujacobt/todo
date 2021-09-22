@@ -1,148 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-        <title>Kerala Tourism-Home</title>
-    <link rel="stylesheet" href="./css/style.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
 
+    <link rel="stylesheet" href="css/todo.css">  
 
-    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Css and js file dowloaded and link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
-
-<!-- Bootstrap Css and js file dowloaded -->
-
-<link rel="stylesheet" href="./css/bootstrap.min.css">    
-<script async src="./JS/bootstrap.min.js"></script>
-
-<script async src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-<!-- End Bootstrap Css and js file   -->  
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
     
-   
+
+       
+      <!-- End Bootstrap Css and js file   -->  
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script async src="js/todo.js"></script>
 
 </head>
+<body>
+  <div class="full">
 
-<body >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" onclick=ajax();>TODO List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">LOGOUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <div class="mydiv">
+  
+    
+  
+
+
 
  
 
+  <div id="demo" onchange="return vald();" >
 
-    <div class="container-fluid col-lg-12 col-md-12 col-sm-12 col-12">
+  </div>
 
-                          
-                            <!-- Nav bar starts here -->
-
-            
-                          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-
-              <div class="navbar-header">
-                <a class="navbar-brand"href="index.html"><img src="images/logo.jpg" class="img-responsive logo"></a>
-
-
-              </div>
-
-
-
-
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html" style="margin-left:1vw;padding:0.7vw;">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="login.html" style="margin-left:1vw;padding:0.7vw;">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="kerala-explorer.html" style="margin-left:1vw;padding:0.7vw;">Explore Kerala</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="signup.html" style="margin-left:1vw;padding:0.7vw;">Sign Up</a>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-                            </nav>
-
-        
-                            <!-- Nav bar ends here -->
-
-
-
-                        <div class="mainContent container-fluid col-lg-6 col-md-6 col-sm-6 col-6"style="margin-right:50vw;text-align:center;text-align:justify;margin-top:2vw;margin-left:1vw;">
-                                                                                     
-                          
-                          
-                          <div>
-                                            <h1  style="font-size: 5vw;text-align: center;">
-                                            KERALA 
-                                          </h1>
-
-                                          <h2  style="font-size: 4vw;text-align: center;">
-
-                                            THE GOD'S OWN COUNTRY
-
-                                          </h2>
-
-                                      </div>
-                                          <p  style="font-size: 1.5vw;margin-left:1vw;text-align: justify;">
-                                            Kerala's beaches, backwaters, lakes, mountain ranges, waterfalls, ancient ports, palaces, religious institutions and wildlife sanctuaries are major attractions for both domestic and international tourists. The city of Kochi ranks first in the total number of international and domestic tourists in Kerala.
-                                            Kerala is known for its ecotourism initiatives which include mountaineering, trekking and bird-watching programmes in the Western Ghats as the major activities.
-
-                                            
-                                          </p>
-
-                         </div>
-
-                              
-
-
-                              <div class="newPara1 ">
-                              
-                              <p  style="font-size: 1.5vw;text-align: justify;padding-bottom:1vw;margin-right: 3vw;margin-bottom: 3vw; margin-top:-26vw;margin-left:48vw;">
-                               
-                                The state's only drive-in beach, Muzhappilangad in Kannur, which stretches across five kilometres of sand, was chosen by the BBC as one of the top six drive-in beaches.
-                                Idukki Dam, the world's second arch dam, and Asia's first is at Idukki. The major beaches are at Kovalam, Varkala, Kozhikode, Fort Kochi, Cherai, Alappuzha, Ponnani, Kadalundi, Tanur, Chaliyam, Payyambalam, Kappad, Muzhappilangad and Bekal. Popular hill stations are at Ponmudi, Wayanad, Wagamon, Munnar, Peermade, Ramakkalmedu, Arimbra, Paithalmala of Kannur district, Kodikuthimala, and Nelliampathi. Munnar is 4,500 feet above sea level and is known for tea plantations, and a variety of flora and fauna. 
-
-                                
-                              </p>
-                             
-                            </div>
-
-                            
-                               
-                              <p  style="font-size: 1.5vw;text-align: justify;padding-bottom:1vw;margin-right: 3vw;margin-bottom: 3vw; margin-top:2vw;margin-left:3vw;">
-                               
-                                The state's only drive-in beach, Muzhappilangad in Kannur, which stretches across five kilometres of sand, was chosen by the BBC as one of the top six drive-in beaches.
-                                Idukki Dam, the world's second arch dam, and Asia's first is at Idukki. The major beaches are at Kovalam, Varkala, Kozhikode, Fort Kochi, Cherai, Alappuzha, Ponnani, Kadalundi, Tanur, Chaliyam, Payyambalam, Kappad, Muzhappilangad and Bekal. Popular hill stations are at Ponmudi, Wayanad, Wagamon, Munnar, Peermade, Ramakkalmedu, Arimbra, Paithalmala of Kannur district, Kodikuthimala, and Nelliampathi. Munnar is 4,500 feet above sea level and is known for tea plantations, and a variety of flora and fauna. 
-
-                                
-                              </p>
-                              
-                            
-
-              <footer style="font-size: 1.5vw;text-align: center;padding:0.2vw;margin-top: 2vw;color:red;font-weight: bold;background-color: white;">
-  Copyright 2020
-              </footer>
-
-
-      </div>
-      <!-- container-fluid ends here -->
-
-
-    </div>
     
 
+  
+</div>
 </body>
 </html>
