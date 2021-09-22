@@ -43,7 +43,7 @@ function ajax(){
       total_checked =  $("input[type='checkbox']:checked").length;
       k=total_checked-j;
       if(k==5){
-                resolve(alert("congradulation :five of the check boxes selected"));
+                resolve(alert("congradulation : Five of the check boxes selected"));
                 console.log(k)
             }
             else{
