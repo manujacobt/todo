@@ -47,7 +47,7 @@ function ajax(){
                 console.log(k)
             }
             else{
-                         reject("five of check box not selected");
+                         reject("Congrats. 5 Tasks have been Successfully Completed");
                       }
 
                     });
