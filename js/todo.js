@@ -1,75 +1,52 @@
 
-var j=0;
-var f1=0;
+varj=0;
 function ajax(){
-  var promise = new Promise(function(resolve,reject){
+        j=0;    
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(){
-      if(this.readyState==4&&this.status==200){
-        f1=1;
+    xhttp.onreadystatechange = function(){     
+      if(this.readyState==4&&this.status==200){        
         var response = JSON.parse(this.responseText);
-        var output ="";
-       
-        
+        var output ="";        
         for(var i=0;i<response.length;i++){
           if(response[i].completed==false){
-            output += "<input type=checkbox id=cb>   "+ response[i].title +"</br></br>";
-          
-          }
-          
-         
+            output += "<input type=checkbox id=cb>   "+ response[i].title +"</br></br>";          
+          }         
           if(response[i].completed==true){
             output += "<input type=checkbox checked disabled id=cb>   "+ response[i].title +"</br></br>";
             j++;
-            console.log(j);
-            
-          }
-                 
-        }
-       
+            console.log(j);            
+          }                 
+        }       
         document.getElementById("demo").innerHTML=output;
-        console.log(Array.isArray(output));
-        
+        console.log(Array.isArray(output));        
       }
     }
     xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
-    xhttp.send();
-    
-  });
-  if (f1==1){
-    resolve();
-  }
-  else{
-    reject("server not ready");
-  }
+    xhttp.send();    
 }
-
-    var total_checked=0;
-    vark=0;
-
-        
-     function vald(){
-     
+var total_checked=0;
+var k=0;
+var ck=0;
+     function vald(){         
+     var promise = new Promise(function(resolve,reject){
       total_checked =  $("input[type='checkbox']:checked").length;
-      k=total_checked-90;
-      if(k==5){        
-               alert("congradulation : Five of the check boxes selected");                
-                console.log(k)
-            }
-           
-          }
-                    
-                     promise
-                     .then(vald)
-                     .catch(function(s){
-                        console.log(s);
-                     })
-                    
-       
-                   
-                
-                  
-      
+      k=total_checked-j;
+      console.log(k);
+           if(k===5){
+               resolve("Congrats. 5 Tasks have been Successfully Completed");
+           }
+               else{
+                   reject("5 check boxes not selected");
+               }
+           });
+       promise
+       .then(function(s){
+           alert(s);
+       })
+       .catch(function(e){
+           console.log(e);
+       })                  
+      }  
 
       
       
