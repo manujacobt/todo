@@ -1,10 +1,12 @@
 
 var j=0;
+var f1=0;
 function ajax(){
-
+  var promise = new Promise(function(resolve,reject){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
       if(this.readyState==4&&this.status==200){
+        f1=1;
         var response = JSON.parse(this.responseText);
         var output ="";
        
@@ -32,30 +34,37 @@ function ajax(){
     }
     xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
     xhttp.send();
-    }
+    
+  });
+  if (f1==1){
+    resolve();
+  }
+  else{
+    reject("server not ready");
+  }
+}
 
     var total_checked=0;
     vark=0;
 
         
      function vald(){
-      return new Promise(function(resolve,reject){
+     
       total_checked =  $("input[type='checkbox']:checked").length;
-      k=total_checked-j;
+      k=total_checked-90;
       if(k==5){        
-                resolve(alert("congradulation : Five of the check boxes selected"));                
+               alert("congradulation : Five of the check boxes selected");                
                 console.log(k)
             }
-            else{
-                         reject("Congrats. 5 Tasks have been Successfully Completed");
-                      }
-
-                    });
+           
+          }
+                    
                      promise
-                     .then(function(s){
+                     .then(vald)
+                     .catch(function(s){
                         console.log(s);
                      })
-                    }
+                    
        
                    
                 
