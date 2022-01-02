@@ -1,5 +1,12 @@
 #demo{
-    margin-left: 5%;
+    padding-left: 20%;
+    font-size: 1.3em;
+    background-image: url(/images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: justify;
+    padding-top: 3%;
+    
 }
 .full{
     background-color: cyan;
@@ -7,4 +14,8 @@
 }
 .mynav{
     padding-left: 40%;
+    font-size: larger;
+}
+#cb{
+    color:red;
 }
