@@ -1,7 +1,7 @@
 .login{
     background: aliceblue;
     height: 100vh;
-    background-image: url(images/back.jpg);
+    background-image: url(../images/back.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
